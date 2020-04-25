@@ -11,8 +11,8 @@ class App extends Component {
   constructor(props){
     super(props);
     this.state={
-      selected_content_id:'HOME'
-      
+      selected_content_id:'HOME',
+      btn:'on'
     };
   }
   getContent(){
@@ -40,6 +40,13 @@ class App extends Component {
               mode:'read',
               selected_content_id:id
             });
+          }.bind(this)} 
+          onclick={function(){
+            if(this.state.btn==='on'){
+                this.setState({btn:'off'});
+            }else{
+                this.setState({btn:'on'});
+            }
           }.bind(this)}
         ></HEADER>
         {this.getContent()}
