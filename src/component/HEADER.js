@@ -1,33 +1,59 @@
 import React,{ Component } from 'react';
 
 class HEADER extends Component{
+    state={
+        list:[],
+        icons:[
+            {key:'facebook',href:'https://www.facebook.com/vismajorcrew',src:'/images/facebook.png'},
+            {key:'instagram',href:'https://www.instagram.com/vismajor_company',src:'/images/instagram.png'},
+            {key:'twitter',href:'https://twitter.com/vismajorcompany',src:'/images/twitter.png'},
+            {key:'youtube',href:'https://www.youtube.com/user/vismajorcompany',src:'/images/youtube.png'},
+            {key:'soundcloud',href:'https://soundcloud.com/vmcofficial',src:'/images/soundcloud.png'}
+        ]
+    }
+  componentDidMount(){
+      fetch('list.json')
+        .then(function(result){
+            return result.json();
+        })
+        .then(function(json){
+            this.setState({list:json});
+        }.bind(this))
+  }
   render(){
+    var listTag = [];
+    var iconTag = [];
+    for(var i = 0; i<this.state.list.length; i++){
+      var li = this.state.list[i];
+      listTag.push(<li key={li.id}><a href={'#'}
+      onClick={function(id,e){
+        e.preventDefault();
+        this.props.onChangePage(id);
+      }.bind(this,li.id)}>{li.title}</a></li>);
+    }
+    for(var i = 0; i<this.state.icons.length;i++){
+        var icon = this.state.icons[i];
+        iconTag.push(<li key={icon.id}><a href={icon.href}><img src={icon.src}/></a></li>)
+    }
     return(
-    <nav className='header-bar'>
-        <h1 className='main-logo'>
-            <a href='index.html'><img src='images/vmc_logo.png'/></a>
-        </h1>
-        <div id='wide-menu'>
-            <ul id='nav-text'>
-                <li><a href='index.html' style='color:white;'>HOME</a></li>
-                <li><a href='about.html'>ABOUT</a></li>
-                <li><a href='Artist.html'>ARTIST</a></li>
-                <li><a href='https://smartstore.naver.com/vmc_store' target="_blank" >STORE</a></li>
-                <li><a href='contact.html'>CONTACT</a></li>
-                <li><a href='FanLetter.html' >FAN-LETTER</a></li>
-            </ul>
-            <ul id='nav-logo'>
-                <li><a href='https://www.facebook.com/vismajorcrew'><img src='images/facebook.png'style='width:25px;height:25px;'/></a></li>
-                <li><a href='https://www.instagram.com/vismajor_company'><img src='images/instagram.png'/></a></li>
-                <li><a href='https://twitter.com/vismajorcompany'><img src='images/twitter.png'/></a></li>
-                <li><a href='https://www.youtube.com/user/vismajorcompany'><img src='images/youtube.png'/></a></li>
-                <li><a href='https://soundcloud.com/vmcofficial'><img src='images/soundcloud.png'/></a></li>
-            </ul>
-        </div>
-        <div className='m-menu' style='top:17px !important;'>
-            <button id='m-menu-btn' value='on' onclick='MenuClick()'>&#8801</button>
-        </div>
-    </nav>
+    <header>
+        <nav className='header-bar'>
+            <h1 className='main-logo'>
+                <a href='/'><img src={require('./images/vmc_logo.png')}/></a>
+            </h1>
+            <div id='wide-menu'>
+                <ul id='nav-text'>
+                    {listTag}
+                </ul>
+                <ul id='nav-logo'>
+                    {iconTag}
+                </ul>
+            </div>
+            <div className='m-menu' style={{top:'17px !important'}}>
+                <button id='m-menu-btn' value='on' onclick='MenuClick()'>M</button>
+            </div>
+        </nav>
+    </header>
     );
   }
 }

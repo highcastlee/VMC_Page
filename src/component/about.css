@@ -1,0 +1,56 @@
+.content{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:600px;
+    padding-top: 200px;
+}
+@media(max-width:1024px){
+    .content{
+        background-image: none;
+    }
+}
+.youtube{
+    text-align: center;
+    color:white;
+
+}
+
+.youtube h1,h2,p{
+    margin:5px;
+}
+.text-large{
+    letter-spacing: 10px;
+    margin-bottom: 20px;
+}
+.youtube h1{
+    font-size: 24px;
+}
+
+.youtube h2{
+    font-size: 50px;
+}
+
+.text-small{
+    width:70%;
+    margin:auto;
+}
+.text-small p{
+    font-size: 0.9rem;
+    line-height: 24px;
+    color:gray;
+}
+
+@media (max-width:1024px){
+    .text-small p{
+        font-size: 0.7rem;
+    }
+    .youtube h1{
+        font-size: 18px;
+    }
+    .youtube h2{
+        font-size: 28px;
+    }
+    .content{
+        padding-top:100px;
+    }
+}

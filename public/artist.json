@@ -1,0 +1,10 @@
+[
+    {"key":"1", "EngName":"Deepflow", "KorName":"딥플로우", "src":"/images/artist1.png"},
+    {"key":"2", "EngName":"Nucksal", "KorName":"넉살", "src":"/images/artist2.png"},
+    {"key":"3", "EngName":"Don Mills", "KorName":"던밀스", "src":"/images/artist3.png"},
+    {"key":"4", "EngName":"Wutan", "KorName":"우탄", "src":"/images/artist4.png"},
+    {"key":"5", "EngName":"Odee", "KorName":"오디", "src":"/images/artist5.png"},
+    {"key":"6", "EngName":"Bigone", "KorName":"빅원", "src":"/images/artist6.png"},
+    {"key":"7", "EngName":"QM", "KorName":"큐엠", "src":"/images/artist7.png"},
+    {"key":"8", "EngName":"Rohann", "KorName":"로한", "src":"/images/artist8.png"},
+]

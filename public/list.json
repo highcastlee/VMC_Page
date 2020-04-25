@@ -1,0 +1,7 @@
+[
+    {"key":"1", "title":"HOME", "id":"HOME"},
+    {"key":"2", "title":"ABOUT", "id":"ABOUT"},
+    {"key":"3", "title":"ARTIST", "id":"ARTIST"},
+    {"key":"4", "title":"STORE", "id":"https://smartstore.naver.com/vmc_store"},
+    {"key":"5", "title":"CONTACT", "id":"CONTACT"}
+]
