@@ -4,35 +4,44 @@ class HEADER extends Component{
   constructor(props){
       super(props);
       this.state={
-          list:[],
+          menu:true,
+          matches: window.matchMedia("(max-width: 1024px)").matches,
+          lists:[
+            {key:"1", title:"HOME", id:"HOME"},
+            {key:"2", title:"ABOUT", id:"ABOUT"},
+            {key:"3", title:"ARTIST", id:"ARTIST"},
+            {key:"4", title:"STORE", id:"https://smartstore.naver.com/vmc_store"},
+            {key:"5", title:"CONTACT", id:"CONTACT"}
+          ],
           icons:[
-              {key:'facebook',href:'https://www.facebook.com/vismajorcrew',src:'/images/facebook.png'},
-              {key:'instagram',href:'https://www.instagram.com/vismajor_company',src:'/images/instagram.png'},
-              {key:'twitter',href:'https://twitter.com/vismajorcompany',src:'/images/twitter.png'},
-              {key:'youtube',href:'https://www.youtube.com/user/vismajorcompany',src:'/images/youtube.png'},
-              {key:'soundcloud',href:'https://soundcloud.com/vmcofficial',src:'/images/soundcloud.png'}
+              {key:'facebook',href:'https://www.facebook.com/vismajorcrew',src:"facebook"},
+              {key:'instagram',href:'https://www.instagram.com/vismajor_company',src:'instagram'},
+              {key:'twitter',href:'https://twitter.com/vismajorcompany',src:'twitter'},
+              {key:'youtube',href:'https://www.youtube.com/user/vismajorcompany',src:'youtube'},
+              {key:'soundcloud',href:'https://soundcloud.com/vmcofficial',src:'soundcloud'}
           ]
-      }
+      };
+      this.onChangeMenu = this.onChangeMenu.bind(this);
   }
-  componentDidMount(){
-      fetch('list.json')
-        .then(function(result){
-            return result.json();
-        })
-        .then(function(json){
-            this.setState({list:json});
-        }.bind(this))
+  componentDidMount() {
+    const handler = e => this.setState({matches: e.matches});
+    window.matchMedia("(max-width: 1024px)").addListener(handler);
+  }
+  onChangeMenu(){
+    this.setState(state =>({
+      menu:!state.menu
+    }));
   }
   render(){
     var listTag = [];
     var iconTag = [];
-    for(var i = 0; i<this.state.list.length; i++){
-      var li = this.state.list[i];
+    for(var i = 0; i<this.state.lists.length; i++){
+      var li = this.state.lists[i];
       if(i===3){
-        listTag.push(<li key={li.id}><a href={'https://smartstore.naver.com/vmc_store'}
-        target='_blank'>{li.title}</a></li>);
+        listTag.push(<li key={li.key}><a href={'https://smartstore.naver.com/vmc_store'}
+        target='_blank' rel="noopener noreferrer">{li.title}</a></li>);
       }else{
-        listTag.push(<li key={li.id}><a href={'#'}
+        listTag.push(<li key={li.key}><a href={'#'}
         onClick={function(id,e){
           e.preventDefault();
           this.props.onChangePage(id);
@@ -41,7 +50,12 @@ class HEADER extends Component{
     }
     for(var i = 0; i<this.state.icons.length;i++){
         var icon = this.state.icons[i];
-        iconTag.push(<li key={icon.id}><a href={icon.href}><img src={icon.src}/></a></li>)
+        iconTag.push(<li key={icon.key}><a href={icon.href}><img src={require('./images/'+icon.src+'.png')}/></a></li>)
+    }
+    if (this.state.menu===true){
+      var wideMenu={display:'none'};
+    }else if(this.state.menu===false){
+      var wideMenu={display:'block'};
     }
     return(
     <header>
@@ -57,9 +71,21 @@ class HEADER extends Component{
                     {iconTag}
                 </ul>
             </div>
-            <div className='m-menu' >
-                <button id='m-menu-btn' value={this.state.btn} onclick={function(){this.props.onClick().bind(this)}}>M</button>
-            </div>
+            {this.state.matches && (
+            <div id='wide-menu' style={wideMenu}>
+              <ul id='nav-text'>
+                  {listTag}
+              </ul>
+              <ul id='nav-logo'>
+                  {iconTag}
+              </ul>
+            </div>)}
+            {this.state.matches && (
+            <div className='m-menu' style={{display:'block !important'}}>
+                <button id='m-menu-btn' onClick={this.onChangeMenu}>
+                  {this.state.menu ? 'M' : 'X'}
+                </button>
+            </div>)}
         </nav>
     </header>
     );

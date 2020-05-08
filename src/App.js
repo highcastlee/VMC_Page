@@ -11,8 +11,7 @@ class App extends Component {
   constructor(props){
     super(props);
     this.state={
-      selected_content_id:'HOME',
-      btn:'on'
+      selected_content_id:'HOME'
     };
   }
   getContent(){
@@ -33,7 +32,7 @@ class App extends Component {
   }
   render(){
     return(
-      <div class='container'>
+      <div className ='container'>
         <HEADER
           onChangePage={function(id){
             this.setState({
@@ -41,13 +40,6 @@ class App extends Component {
               selected_content_id:id
             });
           }.bind(this)} 
-          onclick={function(){
-            if(this.state.btn==='on'){
-                this.setState({btn:'off'});
-            }else{
-                this.setState({btn:'on'});
-            }
-          }.bind(this)}
         ></HEADER>
         {this.getContent()}
       </div>

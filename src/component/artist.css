@@ -47,7 +47,12 @@
     letter-spacing: 3px;
     cursor: pointer;
 }
-.inner-bar:hover, .inner-bar:focus {
+.inner-bar:hover{
+    background-color: white;
+    color:black;
+}
+
+.inner-bar:focus {
     background-color: white;
     color:black;
 }
@@ -160,7 +165,7 @@
     }
     .artist-text ul{
         left: -25px;
-        top: 60px;
+        top: 50px;
     }
     .artist-text p{
         font-size:13px;
