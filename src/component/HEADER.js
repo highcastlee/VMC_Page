@@ -50,18 +50,22 @@ class HEADER extends Component{
     }
     for(var i = 0; i<this.state.icons.length;i++){
         var icon = this.state.icons[i];
-        iconTag.push(<li key={icon.key}><a href={icon.href}><img src={require('./images/'+icon.src+'.png')}/></a></li>)
+        iconTag.push(<li key={icon.key}><a href={icon.href}><img src={require('./images/'+icon.src+'.png')} alt="headerIcon"/></a></li>)
     }
+    var wideMenu;
     if (this.state.menu===true){
-      var wideMenu={display:'none'};
+      wideMenu={display:'none'};
     }else if(this.state.menu===false){
-      var wideMenu={display:'block'};
+      wideMenu={display:'block'};
     }
     return(
     <header>
         <nav className='header-bar'>
             <h1 className='main-logo'>
-                <a href='/'><img src={require('./images/vmc_logo.png')}/></a>
+                <a href='#' onClick={function(id,e){
+                  e.preventDefault();
+                  this.props.onChangePage(id);
+                }.bind(this,this.state.lists[0].id)}><img src={require('./images/vmc_logo.png')} alt="logo"/></a>
             </h1>
             <div id='wide-menu'>
                 <ul id='nav-text'>

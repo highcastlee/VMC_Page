@@ -14,7 +14,7 @@ class ARTIST extends Component{
     this.onChangeMenu = this.onChangeMenu.bind(this);
   }
   componentDidMount(){
-    fetch('artist.json')
+    fetch('./artist.json')
       .then(function(result){
           return result.json();
       })
@@ -52,10 +52,11 @@ class ARTIST extends Component{
     }
   }
   render(){
+    var mobileMenu;
     if (this.state.menu===true){
-      var mobileMenu={display:'none'};
+      mobileMenu={display:'none'};
     }else if(this.state.menu===false){
-      var mobileMenu={display:'block'};
+      mobileMenu={display:'block'};
     }
     return(
       <div className='content'>
@@ -65,32 +66,32 @@ class ARTIST extends Component{
                   <button id='m-artist-button' onClick={this.onChangeMenu} >ARTIST</button>
               </div>
               <div id='ARTIST' className='artist-menu-bar' >
-                  <a className='inner-bar'
+                  <div className='inner-bar'
                   onClick={function(position){
                     this.onChangePosition('artist');
                   }.bind(this)}
-                  >PERFOMANCE ARTIST</a>
+                  >PERFOMANCE ARTIST</div>
               </div>
               {this.state.matches && (
               <div id='ARTIST' className='artist-menu-bar'  style={mobileMenu}>
-                <a href="#" className='inner-bar'
+                <div href="#" className='inner-bar'
                 onClick={function(position){
                   this.onChangePosition('artist');
                 }.bind(this)}
-                >PERFOMANCE ARTIST</a>
+                >PERFOMANCE ARTIST</div>
               </div>)}
               <div id='PRODUCER' className='artist-menu-bar'>
-                  <a href="#" className='inner-bar'
+                  <div href="#" className='inner-bar'
                   onClick={function(position){
                     this.onChangePosition('producer');
-                  }.bind(this)}>PRODUCER / DJ</a>
+                  }.bind(this)}>PRODUCER / DJ</div>
               </div>
               {this.state.matches && (
               <div id='PRODUCER' className='artist-menu-bar' style={mobileMenu}>
-                <a className='inner-bar'
+                <div className='inner-bar'
                 onClick={function(position){
                   this.onChangePosition('producer');
-                }.bind(this)}>PRODUCER / DJ</a>
+                }.bind(this)}>PRODUCER / DJ</div>
               </div>)}
           </div>
           <ul id='artist-list' value='ARTIST'>

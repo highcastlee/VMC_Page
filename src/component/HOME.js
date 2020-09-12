@@ -6,7 +6,7 @@ class HOME extends Component{
     return(
       <div className='content'>
         <section className='youtube'>
-          <iframe width="1126" height="634" src="https://www.youtube.com/embed/jOgLkdZJOJQ" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+          <iframe title="youtube" width="1126" height="634" src="https://www.youtube.com/embed/jOgLkdZJOJQ" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
         </section>
         <article className='instagram'>
         <p className="insta-txt">
