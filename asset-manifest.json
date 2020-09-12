@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/VMC_Style_Page/static/css/main.9e553039.chunk.css",
-    "main.js": "/VMC_Style_Page/static/js/main.ffe51deb.chunk.js",
-    "main.js.map": "/VMC_Style_Page/static/js/main.ffe51deb.chunk.js.map",
+    "main.js": "/VMC_Style_Page/static/js/main.9f29c704.chunk.js",
+    "main.js.map": "/VMC_Style_Page/static/js/main.9f29c704.chunk.js.map",
     "runtime-main.js": "/VMC_Style_Page/static/js/runtime-main.18dd675e.js",
     "runtime-main.js.map": "/VMC_Style_Page/static/js/runtime-main.18dd675e.js.map",
     "static/js/2.c9a95873.chunk.js": "/VMC_Style_Page/static/js/2.c9a95873.chunk.js",
     "static/js/2.c9a95873.chunk.js.map": "/VMC_Style_Page/static/js/2.c9a95873.chunk.js.map",
     "index.html": "/VMC_Style_Page/index.html",
-    "precache-manifest.27cf5be31b2548d9fed8bf464edf3dc4.js": "/VMC_Style_Page/precache-manifest.27cf5be31b2548d9fed8bf464edf3dc4.js",
+    "precache-manifest.4a1e55118f37f8b37b039ef74e0f3dce.js": "/VMC_Style_Page/precache-manifest.4a1e55118f37f8b37b039ef74e0f3dce.js",
     "service-worker.js": "/VMC_Style_Page/service-worker.js",
     "static/css/main.9e553039.chunk.css.map": "/VMC_Style_Page/static/css/main.9e553039.chunk.css.map",
     "static/js/2.c9a95873.chunk.js.LICENSE.txt": "/VMC_Style_Page/static/js/2.c9a95873.chunk.js.LICENSE.txt",
@@ -34,6 +34,6 @@
     "static/js/runtime-main.18dd675e.js",
     "static/js/2.c9a95873.chunk.js",
     "static/css/main.9e553039.chunk.css",
-    "static/js/main.ffe51deb.chunk.js"
+    "static/js/main.9f29c704.chunk.js"
   ]
 }
