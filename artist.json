@@ -1,0 +1,16 @@
+[
+    {"key":"1", "position":"artist", "EngName":"Deepflow", "KorName":"딥플로우", "src":"artist1"},
+    {"key":"2", "position":"artist", "EngName":"Nucksal", "KorName":"넉살", "src":"artist2"},
+    {"key":"3", "position":"artist", "EngName":"Don Mills", "KorName":"던밀스", "src":"artist3"},
+    {"key":"4", "position":"artist", "EngName":"Wutan", "KorName":"우탄", "src":"artist4"},
+    {"key":"5", "position":"artist", "EngName":"Odee", "KorName":"오디", "src":"artist5"},
+    {"key":"6", "position":"artist", "EngName":"Bigone", "KorName":"빅원", "src":"artist6"},
+    {"key":"7", "position":"artist", "EngName":"QM", "KorName":"큐엠", "src":"artist7"},
+    {"key":"8", "position":"artist", "EngName":"Rohann", "KorName":"로한", "src":"artist8"},
+    {"key":"9", "position":"producer", "EngName":"TK", "KorName":"티케이", "src":"producer1"},
+    {"key":"10","position":"producer",  "EngName":"Babynine", "KorName":"베이비나인", "src":"producer2"},
+    {"key":"11","position":"producer",  "EngName":"Buggy", "KorName":"버기", "src":"producer3"},
+    {"key":"12","position":"producer",  "EngName":"Ven", "KorName":"벤", "src":"producer4"},
+    {"key":"13","position":"producer",  "EngName":"Holyday", "KorName":"홀리데이", "src":"producer5"},
+    {"key":"14","position":"producer",  "EngName":"Fredi Casso", "KorName":"프레디카소", "src":"producer6"}
+]
