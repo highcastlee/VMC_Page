@@ -11,8 +11,8 @@ class ARTIST_LIST extends Component{
                     <span>{this.props.data.KorName}</span>
                 </p>
                 <ul className="artist-sns">
-                    <li><a href="#"><img src="images/instagram.png" /></a></li>
-                    <li><a href="#"><img src="images/facebook.png" /></a></li>
+                    <li><a href="#"><img src="images/instagram.png" alt="instagram"/></a></li>
+                    <li><a href="#"><img src="images/facebook.png" alt="facebook"/></a></li>
                 </ul>
             </div>
         </li>
