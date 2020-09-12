@@ -1,0 +1,39 @@
+{
+  "files": {
+    "main.css": "/VMC_Style_Page/static/css/main.1cc31201.chunk.css",
+    "main.js": "/VMC_Style_Page/static/js/main.343e6de3.chunk.js",
+    "main.js.map": "/VMC_Style_Page/static/js/main.343e6de3.chunk.js.map",
+    "runtime-main.js": "/VMC_Style_Page/static/js/runtime-main.18dd675e.js",
+    "runtime-main.js.map": "/VMC_Style_Page/static/js/runtime-main.18dd675e.js.map",
+    "static/js/2.80e27a49.chunk.js": "/VMC_Style_Page/static/js/2.80e27a49.chunk.js",
+    "static/js/2.80e27a49.chunk.js.map": "/VMC_Style_Page/static/js/2.80e27a49.chunk.js.map",
+    "index.html": "/VMC_Style_Page/index.html",
+    "precache-manifest.493f6b45210788a8b6a9d07197f5d4e0.js": "/VMC_Style_Page/precache-manifest.493f6b45210788a8b6a9d07197f5d4e0.js",
+    "service-worker.js": "/VMC_Style_Page/service-worker.js",
+    "static/css/main.1cc31201.chunk.css.map": "/VMC_Style_Page/static/css/main.1cc31201.chunk.css.map",
+    "static/js/2.80e27a49.chunk.js.LICENSE.txt": "/VMC_Style_Page/static/js/2.80e27a49.chunk.js.LICENSE.txt",
+    "static/media/artist1.png": "/VMC_Style_Page/static/media/artist1.d06b3d91.png",
+    "static/media/artist10.png": "/VMC_Style_Page/static/media/artist10.4df64a3c.png",
+    "static/media/artist2.png": "/VMC_Style_Page/static/media/artist2.a1159dfa.png",
+    "static/media/artist3.png": "/VMC_Style_Page/static/media/artist3.b4ad289f.png",
+    "static/media/artist4.png": "/VMC_Style_Page/static/media/artist4.3dc38dc4.png",
+    "static/media/artist5.png": "/VMC_Style_Page/static/media/artist5.a5260137.png",
+    "static/media/artist6.png": "/VMC_Style_Page/static/media/artist6.2f8b7292.png",
+    "static/media/artist7.png": "/VMC_Style_Page/static/media/artist7.b4090da3.png",
+    "static/media/artist8.png": "/VMC_Style_Page/static/media/artist8.934c282c.png",
+    "static/media/artist9.png": "/VMC_Style_Page/static/media/artist9.8f0cc2e5.png",
+    "static/media/instagram.png": "/VMC_Style_Page/static/media/instagram.24939eb3.png",
+    "static/media/producer1.png": "/VMC_Style_Page/static/media/producer1.1a811133.png",
+    "static/media/producer2.png": "/VMC_Style_Page/static/media/producer2.db7f3c27.png",
+    "static/media/producer3.png": "/VMC_Style_Page/static/media/producer3.e42a1ab2.png",
+    "static/media/producer4.png": "/VMC_Style_Page/static/media/producer4.32aa137d.png",
+    "static/media/producer5.png": "/VMC_Style_Page/static/media/producer5.b7b6fddb.png",
+    "static/media/producer6.png": "/VMC_Style_Page/static/media/producer6.d2e34f5f.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.18dd675e.js",
+    "static/js/2.80e27a49.chunk.js",
+    "static/css/main.1cc31201.chunk.css",
+    "static/js/main.343e6de3.chunk.js"
+  ]
+}
