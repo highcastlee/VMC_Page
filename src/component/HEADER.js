@@ -1,4 +1,5 @@
 import React,{ Component } from 'react';
+import './VMC.css';
 
 class HEADER extends Component{
   constructor(props){
@@ -25,7 +26,7 @@ class HEADER extends Component{
   }
   componentDidMount() {
     const handler = e => this.setState({matches: e.matches});
-    window.matchMedia("(max-width: 1024px)").addListener(handler);
+    window.matchMedia("(max-width: 1024px)").addEventListener("change",handler);
   }
   onChangeMenu(){
     this.setState(state =>({
@@ -35,22 +36,25 @@ class HEADER extends Component{
   render(){
     var listTag = [];
     var iconTag = [];
-    for(var i = 0; i<this.state.lists.length; i++){
-      var li = this.state.lists[i];
+    for(var i = 0, li; i<this.state.lists.length; i++){
+      li = this.state.lists[i];
       if(i===3){
         listTag.push(<li key={li.key}><a href={'https://smartstore.naver.com/vmc_store'}
         target='_blank' rel="noopener noreferrer">{li.title}</a></li>);
       }else{
-        listTag.push(<li key={li.key}><a href={'#'}
+        listTag.push(<li key={li.key}><div className='nav-list'
         onClick={function(id,e){
           e.preventDefault();
           this.props.onChangePage(id);
-        }.bind(this,li.id)}>{li.title}</a></li>);
+          this.setState(state =>({
+            menu:!state.menu
+          }));
+        }.bind(this,li.id)}>{li.title}</div></li>);
       }
     }
-    for(var i = 0; i<this.state.icons.length;i++){
-        var icon = this.state.icons[i];
-        iconTag.push(<li key={icon.key}><a href={icon.href}><img src={require('./images/'+icon.src+'.png')} alt="headerIcon"/></a></li>)
+    for(var j = 0,icon; j<this.state.icons.length;j++){
+        icon = this.state.icons[j];
+        iconTag.push(<li key={icon.key}><a href={icon.href}><img src={require('./images/'+icon.src+'.png')} alt="icon"/></a></li>)
     }
     var wideMenu;
     if (this.state.menu===true){
@@ -62,10 +66,10 @@ class HEADER extends Component{
     <header>
         <nav className='header-bar'>
             <h1 className='main-logo'>
-                <a href='#' onClick={function(id,e){
+                <div id='logo' onClick={function(id,e){
                   e.preventDefault();
                   this.props.onChangePage(id);
-                }.bind(this,this.state.lists[0].id)}><img src={require('./images/vmc_logo.png')} alt="logo"/></a>
+                }.bind(this,this.state.lists[0].id)}><img src={require('./images/vmc_logo.png')} alt="logo"/></div>
             </h1>
             <div id='wide-menu'>
                 <ul id='nav-text'>

@@ -43,13 +43,16 @@ header{
     height: 50px;
     position: absolute;
 }
-.main-logo a{
+#logo{
     height: 50px;
     width: 50px;
 }
-.main-logo a img{
+#logo img{
     width:50px;
     height:50px;
+}
+#logo img:hover{
+    cursor: pointer;
 }
 #wide-menu{
     display: block;
@@ -62,41 +65,36 @@ header{
 /* 네비게이션 텍스트 라인 */
 #nav-text{
     display: inline-block;
-    padding-left: 76px;
+    padding-left: 90px;
     margin: 0;
 }
 
 #nav-text li{
     display:inline-block;
-}
-
-#nav-text li a{
     text-decoration: none;
-    padding:10px;
     color:#808080;
     font-size: 12px;
     letter-spacing: 2px;
+    margin: 0 0.5rem;
 }
-
+.nav-list:hover{
+    cursor: pointer;
+    color:white;
+    opacity: 1;
+}
+.nav-list:focus{
+    color:white;
+    opacity: 1;
+}
 /* SNS 로고 라인 */
-#nav-logo li a{
-    text-decoration: none;
-    padding:5px;
-    opacity: 0.3;
-}
-#nav-text li a:hover{
-    color:white;
-    opacity: 1;
-}
-#nav-text li a:focus{
-    color:white;
-    opacity: 1;
-}
 #nav-logo{
     display:inline-block;
     float: right;
     padding-right: 20px;
-    margin: 0;
+    margin-top: 5px;
+}
+#nav-logo::after{
+    clear:both;
 }
 #nav-logo li{
     display:inline-block;
@@ -104,6 +102,8 @@ header{
     vertical-align: top;
 }
 #nav-logo li a{
+    text-decoration: none;
+    padding:5px;
     opacity: 0.3;
 }
 #nav-logo li a:hover{

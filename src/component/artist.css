@@ -14,7 +14,6 @@
     display:block;
     width:98.4%;
     height: 50px;
-    border: 2px solid white;
     margin-bottom: -2;
 }
 
@@ -48,6 +47,7 @@
     cursor: pointer;
 }
 .inner-bar:hover{
+    cursor: pointer;
     background-color: white;
     color:black;
 }
@@ -116,9 +116,12 @@
     list-style: none;
 }
 
-.artist-sns li a img{
+.artist-sns li span img{
     width:30px;
     height: 30px;
+}
+.artist-sns li span:hover{
+    cursor: pointer;
 }
 
 #producer-list{
