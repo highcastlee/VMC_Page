@@ -1,7 +1,8 @@
 # VMC_Style_Page
 https://highcastle4242.github.io/VMC_Style_Page
+(최신 수정 : 09/19)
 
-(본 프로젝트는 6월에 진행한 프로젝트이며, 깃허브 배포는 9/13 입니다.)
+(본 프로젝트는 6월에 진행한 프로젝트이며, 깃허브 배포는 9월 입니다.)
 
 - 기존 멀티 페이지 웹사이트를 HTML,CSS,Javascript로 구현 후, React로 재구성
 - 반응형 웹 구현
