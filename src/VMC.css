@@ -66,14 +66,21 @@ header{
 
 #nav-text li{
     display:inline-block;
-}
-
-#nav-text li a{
     text-decoration: none;
     padding:10px;
     color:#808080;
     font-size: 12px;
     letter-spacing: 2px;
+}
+
+.nav-list:hover{
+    cursor: pointer;
+    color:white;
+    opacity: 1;
+}
+.nav-list:focus{
+    color:white;
+    opacity: 1;
 }
 
 /* SNS 로고 라인 */
