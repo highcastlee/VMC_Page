@@ -39,7 +39,7 @@ class HEADER extends Component{
     for(var i = 0, li; i<this.state.lists.length; i++){
       li = this.state.lists[i];
       if(i===3){
-        listTag.push(<li key={li.key}><a href={'https://smartstore.naver.com/vmc_store'}
+        listTag.push(<li key={li.key}><a className='nav-list' href={'https://smartstore.naver.com/vmc_store'}
         target='_blank' rel="noopener noreferrer">{li.title}</a></li>);
       }else{
         listTag.push(<li key={li.key}><div className='nav-list'
