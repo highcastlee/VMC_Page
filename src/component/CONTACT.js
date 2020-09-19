@@ -1,9 +1,11 @@
 import React,{ Component } from 'react';
 import './contact.css';
+import {Helmet} from "react-helmet";
 class CONTACT extends Component{
   render(){
     return(
       <div class='content'>
+        <Helmet><title>VMC-CONTACT</title></Helmet>
         <article class='instagram'>
           <div >
               <p class='contact-title'>

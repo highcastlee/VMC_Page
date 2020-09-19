@@ -43,18 +43,16 @@ header{
     height: 50px;
     position: absolute;
 }
-.main-logo a{
+#logo img{
     height: 50px;
     width: 50px;
 }
-.main-logo a img{
-    width:50px;
-    height:50px;
+#logo img:hover:{
+    cursor: pointer;
 }
 #wide-menu{
     display: block;
     width: 100%;
-    vertical-align: middle;
     margin: 0;
     height: 50px;
     line-height: 50px;
@@ -114,7 +112,7 @@ header{
 /*모바일 버전 메뉴바*/
 .m-menu{
     position: absolute;
-    top: 20px;
+    top: 15px;
     right: 15px;
     display: none;
 }
@@ -235,9 +233,9 @@ header{
         height: 70px;
     }
     .main-logo{
-        top: 20px;
+        top: 15px;
     }
-    .main-logo a img{
+    #logo img{
         width: 35px;
         height: 35px;
     }

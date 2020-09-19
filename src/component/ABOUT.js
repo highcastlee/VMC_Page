@@ -1,9 +1,11 @@
 import React,{ Component } from 'react';
 import './about.css';
+import {Helmet} from "react-helmet";
 class ABOUT extends Component{
   render(){
     return(
       <div class='content'>
+        <Helmet><title>VMC-ABOUT</title></Helmet>
         <section class='youtube'>
             <div class='text-large'>
                 <h1 >WE MAKING</h1>

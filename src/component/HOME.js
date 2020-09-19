@@ -1,10 +1,12 @@
 import React,{ Component } from 'react';
 import './VMC.css';
+import {Helmet} from "react-helmet";
 
 class HOME extends Component{
   render(){
     return(
       <div className='content'>
+        <Helmet><title>VMC-HOME</title></Helmet>
         <section className='youtube'>
           <iframe title="youtube" width="1126" height="634" src="https://www.youtube.com/embed/jOgLkdZJOJQ" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
         </section>

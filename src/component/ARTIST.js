@@ -1,6 +1,7 @@
 import React,{ Component } from 'react';
 import ARTIST_LIST from './ARTIST_LIST.js'
 import './artist.css';
+import {Helmet} from "react-helmet";
 
 class ARTIST extends Component{
   constructor(props){
@@ -62,6 +63,7 @@ class ARTIST extends Component{
     }
     return(
       <div className='content'>
+        <Helmet><title>VMC-ARTIST</title></Helmet>
         <article className='artist'>
           <div className='artist-menu'>
               <div className='m-artist-menu-bar'>

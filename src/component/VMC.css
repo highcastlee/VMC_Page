@@ -43,10 +43,6 @@ header{
     height: 50px;
     position: absolute;
 }
-#logo{
-    height: 50px;
-    width: 50px;
-}
 #logo img{
     width:50px;
     height:50px;
@@ -118,7 +114,7 @@ header{
 /*모바일 버전 메뉴바*/
 .m-menu{
     position: absolute;
-    top: 20px;
+    top: 15px;
     right: 15px;
     display: none;
 }
@@ -214,9 +210,6 @@ header{
     background-color: white;
     color:black;
 }
-#btn-follow:focus{
-    
-}
 #btn-follow span{
     font-size: 20px;
 }
@@ -242,11 +235,11 @@ header{
         height: 70px;
     }
     .main-logo{
-        top: 20px;
+        top: 15px;
     }
-    .main-logo a img{
-        width: 35px;
-        height: 35px;
+    #logo img{
+        width: 40px;
+        height: 40px;
     }
     #wide-menu{
         position: absolute;

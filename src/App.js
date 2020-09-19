@@ -6,6 +6,7 @@ import ARTIST from './component/ARTIST.js'
 import ABOUT from './component/ABOUT.js'
 import './App.css';
 import './VMC.css';
+import {Helmet} from "react-helmet";
 
 class App extends Component {
   constructor(props){
@@ -23,16 +24,17 @@ class App extends Component {
       _article=<ABOUT></ABOUT>;
     }else if(id==='ARTIST'){
       _article=<ARTIST></ARTIST>
-    }else if(id==='STORE'){
-
     }else if(id==='CONTACT'){
       _article=<CONTACT></CONTACT>;
     }
-    return _article
+    return _article;
   }
   render(){
     return(
       <div className ='container'>
+        <Helmet>
+          <meta charSet="utf-8"/>
+        </Helmet>
         <HEADER
           onChangePage={function(id){
             this.setState({
