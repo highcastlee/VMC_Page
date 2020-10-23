@@ -1,5 +1,5 @@
 # VMC_Style_Page
-https://highcastle4242.github.io/VMC_Style_Page
+https://highcastlee.github.io/VMC_Page
 (최신 수정 : 09/19)
 
 (본 프로젝트는 6월에 진행한 프로젝트이며, 깃허브 배포는 9월 입니다.)
